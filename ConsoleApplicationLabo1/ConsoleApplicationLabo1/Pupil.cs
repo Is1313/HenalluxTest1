@@ -44,5 +44,14 @@ namespace ConsoleApplicationLabo1
             }
             return ch;
         }
+
+        public void AddEvaluation(String title = null, char evaluation = 'S')
+        {
+            foreach (Activity activity in ListActivities)
+            {
+                if (title.Equals(activity.Title))
+                    TabEval[ListActivities.IndexOf(activity)] = evaluation;
+            }
+        }
     }
 }
