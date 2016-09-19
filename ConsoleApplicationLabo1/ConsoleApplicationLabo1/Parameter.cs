@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplicationLabo1
 {
-    class Parameter
+    public static class Parameter
     {
+        private static int maxActivity = 10;
+        private int enum enumEval
+        {
+            R = 1,S,T
+        }
+        public static int MAXACTIVITY { get; set; }
     }
 }

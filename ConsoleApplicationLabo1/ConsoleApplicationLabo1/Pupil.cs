@@ -25,7 +25,10 @@ namespace ConsoleApplicationLabo1
 
         public void AddActivity(Activity act)
         {
-            ListActivities.Add(act);
+            if (ListActivities.Count() <= Parameter.MAXACTIVITY)
+                ListActivities.Add(act);
+            else
+                System.Console.Write("ERREUR : trop d'activité");
         }
 
         public override string ToString()
