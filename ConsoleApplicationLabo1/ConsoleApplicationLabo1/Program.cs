@@ -25,9 +25,40 @@ namespace ConsoleApplicationLabo1
             listPupil.Add(julien);
             listPupil.Add(loic);
 
-            var pupilGrade1Plus6 = from pupil in listPupil
+            List<Pupil> listPupils = new List<Pupil>();
+            {
+                new Pupil("aaa", 10, 1);
+                new Pupil("bbb", 20, 2);
+                new Pupil("ccc", 30, 3);
+                new Pupil("ddd", 40, 4);
+
+            }
+
+            List<Pupil> listPupilsDuplicated = new List<Pupil>();
+            {
+                new Pupil("aaa", 10, 1);
+                new Pupil("bbb", 20, 2);
+                new Pupil("ccc", 30, 3);
+                new Pupil("ddd", 40, 4);
+
+            }
+
+            List<Person> listPersons = new List<Person>();
+            {
+                new Person("ppaaa", 10);
+                new Person("ppbbb", 20);
+                new Person("ppccc", 30);
+                new Person("ppddd", 40);
+
+            }
+
+            var listFusion = listPersons.Union(listPupils);
+
+            /*var pupilGrade1Plus6 = from pupil in listPupil
                                    where pupil.Grade == 1 && pupil.Age > 6
-                                   select pupil;
+                                   select pupil;*/
+
+            var pupilGrade1Plus6 = listPupil.Where(pupil => pupil.Grade == 1 && pupil.Age > 6)
 
             foreach (Pupil pupil in pupilGrade1Plus6)
                 System.Console.Write(pupil);

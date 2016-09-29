@@ -8,11 +8,13 @@ namespace ConsoleApplicationLabo1
 {
     public static class Parameter
     {
-        private static int maxActivity = 10;
-        private int enum enumEval
+        private const int maxActivity = 10;
+        private enum enumEval
         {
             R = 1,S,T
         }
         public static int MAXACTIVITY { get; set; }
+
+        public static int ENUMEVAL { get; set; }
     }
 }
